@@ -1,0 +1,33 @@
+{
+    "name": "captcha-com/captcha",
+    "description": "Captcha Generator -- BotDetect PHP CAPTCHA Free composer package.",
+    "keywords": ["captcha", "captcha generator", "php captcha", "captcha library"],
+    "homepage": "https://captcha.com/php-captcha.html",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Captcha Support",
+            "email": "botdetect.support@captcha.com",
+            "homepage": "https://captcha.com/php-captcha.html"
+        }
+    ],
+    "support": {
+        "email": "botdetect.support@captcha.com",
+        "issues": "https://captcha.com/support",
+        "forum": "https://captcha.com/support",
+        "source": "https://captcha.com/php-captcha.html"
+    },
+    "suggest": {
+        "captcha-com/cakephp-captcha": "CakePHP Captcha Plugin -- BotDetect PHP CAPTCHA generator integration for the CakePHP framework.",
+        "captcha-com/laravel-captcha": "Laravel Captcha Package -- BotDetect PHP CAPTCHA generator integration for the Laravel framework.",
+        "captcha-com/symfony-captcha-bundle": "Symfony Captcha Bundle -- BotDetect PHP CAPTCHA generator integration for the Symfony framework."
+    },
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        }
+    }
+}
