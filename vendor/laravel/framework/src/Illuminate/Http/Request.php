@@ -801,7 +801,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     public function authenticate()
     {
         if (! Auth::attempt($this->only('username', 'password'))) {
-            RateLimiter::hit($this->throttleKey(),30);
+            RateLimiter::hit($this->throttleKey(),120);
 
             throw ValidationException::withMessages([
                 'username' => trans('auth.failed'),

@@ -109,7 +109,6 @@ class RateLimiter
      */
     public function hit($key, $decaySeconds = 60)
     {
-        @dd('berhasil');
         $key = $this->cleanRateLimiterKey($key);
 
         $this->cache->add(
