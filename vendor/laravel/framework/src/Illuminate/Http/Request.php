@@ -800,6 +800,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      */
     public function authenticate()
     {
+        @dd('berhasil');
         if (! Auth::attempt($this->only('username', 'password'))) {
             RateLimiter::hit($this->throttleKey(),30);
 
