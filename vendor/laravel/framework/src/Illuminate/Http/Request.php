@@ -824,7 +824,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      */
     public function ensureIsNotRateLimited()
     {
-        if (! RateLimiter::tooManyAttempts($this->throttleKey(), 2)) {
+        if (! RateLimiter::tooManyAttempts($this->throttleKey(), 0)) {
             return;
         }
 
