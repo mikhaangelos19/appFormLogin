@@ -15,7 +15,8 @@
         </div>
         
         <div class="input-group mb-3">
-            <input type="file" class="form-control @error('video') is-invalid @enderror" id="video" name="video" required value="{{ old('title', $post->title) }}">
+            <input type="hidden" name="oldVideo" value="{{ $post->video }}">
+            <input type="file" class="form-control @error('video') is-invalid @enderror" id="video" name="video">
             @error('video')
                 <div class="invalid-feedback">
                     {{ $message }}

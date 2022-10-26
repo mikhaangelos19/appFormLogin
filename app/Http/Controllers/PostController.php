@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -88,6 +89,9 @@ class PostController extends Controller
         ]);
         
         if($request->file('video')) {
+            if($request->oldVideo){
+                Storage::delete($request->oldVideo);
+            }
             $validateData['video'] = $request->file('video')->store('videos');
         }
 
@@ -105,6 +109,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if($post->video){
+            Storage::delete($post->video);
+        }
         Post::destroy($post->id);
         return redirect('/dashboard/manage')->with('success', 'Video deleted successfully');
     }
